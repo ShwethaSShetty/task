@@ -1,0 +1,31 @@
+<div class="container">
+<app-navbar></app-navbar>
+<div class="chart">
+        <fusioncharts
+            [id]="id"
+            [width]="width"
+            [height]="height"
+            [type]="type"
+            [dataFormat]="dataFormat"
+            [dataSource]="dataSourceDemo"
+        ></fusioncharts>
+    </div>
+    <div class="data-list-container">
+            <mat-list dense class="data-list">
+                    <mat-list-item *ngFor="let data of top5Data" class="data-list-detail"> 
+                      <img [src]="teamImage" class="logo-thumbnail data-item">
+                      <span class="letter-icon">{{data.Team.charAt(0)}}</span>
+                       <div class="data-item">{{data.Team}}</div>
+                       <div class="data-item">{{data.Achievement}} %</div>
+                       <div class="data-item">{{data.Efficiency}}</div>
+                    </mat-list-item>
+                   </mat-list>
+    </div>
+
+</div>
+
+
+
+
+
+
